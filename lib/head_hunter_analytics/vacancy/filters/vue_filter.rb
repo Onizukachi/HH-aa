@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module HeadHunterAnalytic
-  module VacancyFilters
+module HeadHunterAnalytics
+  module Vacancy
     class VueFilter < BaseFilter
       KEYWORDS = %w[vue js frontend].freeze
     end

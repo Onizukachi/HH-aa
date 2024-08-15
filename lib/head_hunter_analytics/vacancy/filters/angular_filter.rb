@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module HeadHunterAnalytic
-  module VacancyFilters
-    class AngularFilter < VacancyFilters::BaseFilter
+module HeadHunterAnalytics
+  module Vacancy
+    class AngularFilter < BaseFilter
       KEYWORDS = %w[angular js frontend front].freeze
     end
   end

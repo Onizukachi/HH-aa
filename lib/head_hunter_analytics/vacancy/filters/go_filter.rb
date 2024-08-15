@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module HeadHunterAnalytic
-  module VacancyFilters
+module HeadHunterAnalytics
+  module Vacancy
     class GoFilter < BaseFilter
       KEYWORDS = %w[go golang backend].freeze
     end

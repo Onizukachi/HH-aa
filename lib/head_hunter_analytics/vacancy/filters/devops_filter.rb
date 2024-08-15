@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module HeadHunterAnalytic
-  module VacancyFilters
+module HeadHunterAnalytics
+  module Vacancy
     class DevopsFilter < BaseFilter; end
   end
 end

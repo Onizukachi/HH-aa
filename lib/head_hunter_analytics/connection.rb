@@ -2,11 +2,11 @@
 
 require 'faraday'
 
-module HeadHunterAnalytic
+module HeadHunterAnalytics
   module Connection
     def connection
       @connection ||= Faraday.new do |conn|
-        conn.url_prefix = HeadHunterAnalytic.configuration.base_url
+        conn.url_prefix = HeadHunterAnalytics.configuration.base_url
         conn.request :json
         conn.response :json, content_type: 'application/json'
         conn.adapter Faraday.default_adapter
