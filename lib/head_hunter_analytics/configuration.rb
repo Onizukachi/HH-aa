@@ -2,13 +2,14 @@
 
 module HeadHunterAnalytics
   class Configuration
-    attr_accessor :base_url, :request_sleep_time, :max_retry, :sleep_multiplier
+    attr_accessor :base_url, :request_sleep_time, :max_retry, :sleep_multiplier, :adapter
 
     def initialize
       @base_url = 'https://api.hh.ru/'
       @request_sleep_time = 0.4
       @sleep_multiplier = 2
       @max_retry = 10
+      @adapter = Faraday.default_adapter
     end
   end
 

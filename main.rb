@@ -8,5 +8,9 @@ HeadHunterAnalytics.configure do |config|
   config.request_sleep_time = 0.1
 end
 
-vacancy_collection = HeadHunterAnalytics::Vacancy::Loader.load(language: 'Ruby on Rails')
-p vacancy_collection.collection
+client = HeadHunterAnalytics::Client.new
+
+vacancy_collection = client.vacancies.collection('Ruby on Rails')
+p vacancy_collection.skills_stat
+p vacancy_collection.avg_salary
+

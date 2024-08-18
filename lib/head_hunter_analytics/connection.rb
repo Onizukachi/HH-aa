@@ -9,7 +9,7 @@ module HeadHunterAnalytics
         conn.url_prefix = HeadHunterAnalytics.configuration.base_url
         conn.request :json
         conn.response :json, content_type: 'application/json'
-        conn.adapter Faraday.default_adapter
+        conn.adapter HeadHunterAnalytics.configuration.adapter || Faraday.default_adapter
       end
     end
   end
