@@ -1,4 +1,8 @@
-Documentation:
+AllCops:
+  NewCops: enable
+Style/Documentation:
   Enabled: false
 Style/ParallelAssignment:
+  Enabled: false
+Style/OpenStructUse:
   Enabled: false

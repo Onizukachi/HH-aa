@@ -15,8 +15,8 @@ module HeadHunterAnalytics
       @collection = []
     end
 
-    def each(&block)
-      collection.each(&block)
+    def each(&)
+      collection.each(&)
     end
   end
 end

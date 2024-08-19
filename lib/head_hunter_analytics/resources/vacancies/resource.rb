@@ -12,6 +12,7 @@ module HeadHunterAnalytics
       #
       # @see { HeadHunterAnalytics::Client.vacancies }
       class Resource < HeadHunterAnalytics::Resources::Base
+        # rubocop:disable Metrics/AbcSize
         def list(params = {})
           params = params.dup
 
@@ -22,9 +23,9 @@ module HeadHunterAnalytics
           filter = params[:filter] || FilterFactory.create_filter(params[:text])
 
           response = client.get(make_path('vacancies'), params)
-
           OpenStruct.new(items: filter.call(response.body['items']), pages: response.body['pages'])
         end
+        # rubocop:enable Metrics/AbcSize
 
         def show(id)
           response = client.get(make_path("vacancies/#{id}"))

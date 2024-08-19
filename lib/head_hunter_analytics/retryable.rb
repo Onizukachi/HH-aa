@@ -10,6 +10,8 @@ module HeadHunterAnalytics
       TooManyRequests
     ].freeze
 
+    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/AbcSize
     def with_retries(*args)
       options = args.extract_options!
       exceptions = args
@@ -35,5 +37,7 @@ module HeadHunterAnalytics
         retry
       end
     end
+    # rubocop:enable Metrics/MethodLength
+    # rubocop:enable Metrics/AbcSize
   end
 end
